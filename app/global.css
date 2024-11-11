@@ -23,16 +23,19 @@ main {
     padding: 20px;
     text-align: center;
     color: #383838;
-    overflow: hidden; /* Prevents form from being pushed out */
 }
 
 section {
     width: 100%;
-    flex-grow: 1;
+    flex-grow: 1; /* Ensures the section takes available space above the form */
+}
+
+section.populated {
+    max-height: calc(100% - 70px); /* Ensures space for form below */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    overflow-y: auto; /* Enables scrolling */
+    overflow-y: auto;
     padding: 10px 0;
     scroll-behavior: smooth;
 }
@@ -48,9 +51,9 @@ form {
     border-top: #828282 solid 2px;
     padding-top: 10px;
     border-radius: 0 0 10px 10px;
-    position: sticky; /* Keeps form at the bottom */
+    overflow: hidden;
+    position: relative;
     bottom: 0;
-    background: linear-gradient(to bottom, #f8f8f8, #cfcfcf); /* Match the background */
 }
 
 input.question-box {
