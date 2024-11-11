@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@datastax/astra-db-ts": "^1.1.0",
-    "ai": "^3.4.33",
+    "ai": "2.2.27",
     "dotenv": "^16.4.5",
     "langchain": "^0.1.36",
     "next": "14.2.3",
